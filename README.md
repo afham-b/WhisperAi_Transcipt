@@ -21,12 +21,12 @@ to get a transcipt back
 or you can run the python code here, using your own directory.
 
 
-# Run on GPU with FP16
-model = WhisperModel(model_size, device="cuda", compute_type="float16")
+To Run on GPU with FP16
+>>model = WhisperModel(model_size, device="cuda", compute_type="float16")
 
-# or run on GPU with INT8
-# model = WhisperModel(model_size, device="cuda", compute_type="int8_float16")
-# or run on CPU with INT8
-# model = WhisperModel(model_size, device="cpu", compute_type="int8")
+orun on GPU with INT8
+>>model = WhisperModel(model_size, device="cuda", compute_type="int8_float16")
+or run on CPU with INT8
+>>model = WhisperModel(model_size, device="cpu", compute_type="int8")
 
 segments, info = model.transcribe("audio.mp3", beam_size=5)
